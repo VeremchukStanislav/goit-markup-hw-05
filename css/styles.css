@@ -592,10 +592,15 @@ p {
   letter-spacing: 0.03em;
   color: var(--main-color-text);
 }
-.img {
+.projects-list-item-img {
+  display: block;
+}
+.projects-list-item-wrapper {
   position: relative;
+  overflow: hidden;
 }
 .projects-title-description {
+  opacity: 0;
   padding-top: 63px;
   padding-right: 24px;
   padding-bottom: 63px;
@@ -603,7 +608,7 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  top: 0;
+  top: 100%;
   left: 0;
   position: absolute;
   margin: 0px;
@@ -612,6 +617,8 @@ p {
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--third-color-text);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-list {
   display: flex;
@@ -625,6 +632,16 @@ p {
 .projects-list-item:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.projects-list-item-link {
+  display: block;
+}
+.projects-list-item-link:hover .projects-title-description,
+.projects-list-item-link:focus .projects-title-description {
+  top: 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: 250ms transform linear;
 }
 .projects-list-item:nth-child(3n) {
   margin-right: 0px;
