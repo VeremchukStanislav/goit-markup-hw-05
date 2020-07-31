@@ -106,15 +106,14 @@ p {
   text-decoration: none;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-list-link {
   color: var(--secondary-color-text);
+  position: relative;
 }
 .navigation-list-link.current {
   color: var(--accent-color);
-}
-.current {
-  position: relative;
 }
 .current::after {
   position: absolute;
@@ -201,6 +200,7 @@ p {
   cursor: pointer;
   border-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -372,6 +372,8 @@ p {
   padding-bottom: 12px;
   padding-left: 12px;
   color: var(--color-icons);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-list-social-item-link:hover,
 .team-list-social-item-link:focus {
@@ -409,6 +411,7 @@ p {
   width: 170px;
   height: 90px;
   color: var(--color-icons);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list-item-link:hover,
 .clients-list-item-link:focus {
@@ -420,31 +423,37 @@ p {
   fill: currentColor;
   width: 44px;
   height: 49px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-svg-item2 {
   fill: currentColor;
   width: 40px;
   height: 52px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-svg-item3 {
   fill: currentColor;
   width: 41px;
   height: 43px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-svg-item4 {
   fill: currentColor;
   width: 80px;
   height: 42px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-svg-item5 {
   fill: currentColor;
   width: 59px;
   height: 47px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-svg-item6 {
   fill: currentColor;
   width: 88px;
   height: 45px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Footer*/
@@ -497,6 +506,7 @@ p {
   color: var(--background-color);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .join-in-item-link:hover,
 .join-in-item-link:focus {
@@ -568,6 +578,7 @@ p {
   border-color: transparent;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-list-item-button:hover,
 .btn-list-item-button:focus {
@@ -618,7 +629,8 @@ p {
   letter-spacing: 0.03em;
   color: var(--third-color-text);
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 700ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-list {
   display: flex;
@@ -627,6 +639,7 @@ p {
 .projects-list-item {
   margin-right: 30px;
   margin-bottom: 30px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-list-item:hover,
 .projects-list-item:focus {
@@ -638,10 +651,8 @@ p {
 }
 .projects-list-item-link:hover .projects-title-description,
 .projects-list-item-link:focus .projects-title-description {
-  top: 0;
   opacity: 1;
   transform: translateY(0);
-  transition: 250ms transform linear;
 }
 .projects-list-item:nth-child(3n) {
   margin-right: 0px;
